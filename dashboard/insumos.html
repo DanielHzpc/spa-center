@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Spa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .highlight { background-color: #f8f9fa; }
+        .price-col { font-weight: bold; }
+        .sales-col { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm mb-4" style="border-bottom: 1px solid #f0f0f0;">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold fs-4" href="#" style="color: #d48a9f;">Dashboard Spa</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item mx-1">
+                        <a class="nav-link px-3 py-2 rounded" href="clientes.html" style="color: #888;">Clientes</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link px-3 py-2 rounded active" href="vendedores.html" style="color: #888;">Vendedores</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link px-3 py-2 rounded" href="productos.html" style="color: #888;">Productos</a>
+                    </li>
+
+                    <li class="nav-item mx-1">
+                        <a class="nav-link px-3 py-2 rounded" href="categorias.html" style="color: #888;" >Categorías</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link px-3 py-2 rounded" href="insumos.html" style="background-color: #f8e8eb; color: #c76988;">Insumos</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a href="../index.html" class="btn btn-light">Cerrar Sesion</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="mb-4">Listado de Insumos</h2>
+        
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered">
+                <thead class="table-light">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Categoría</th>
+                        <th>Cantidad</th>
+                        <th>Proveedor</th>
+                        <th>Fecha vencimiento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>INS-001</td>
+                        <td>Aceite de Almendras</td>
+                        <td>Corporales</td>
+                        <td class="sales-col">25</td>
+                        <td>Natural Beauty</td>
+                        <td>15/12/2024</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>INS-002</td>
+                        <td>Arcilla Blanca</td>
+                        <td>Faciales</td>
+                        <td class="sales-col">18</td>
+                        <td>Mineral Cosmetics</td>
+                        <td>30/06/2025</td>
+                    </tr>
+                    <tr>
+                        <td>INS-003</td>
+                        <td>Gel de Aloe Vera</td>
+                        <td>Faciales</td>
+                        <td class="sales-col">32</td>
+                        <td>Organic Care</td>
+                        <td>22/08/2024</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>INS-004</td>
+                        <td>Aceite Esencial de Lavanda</td>
+                        <td>Aromaterapia</td>
+                        <td class="sales-col">12</td>
+                        <td>Essence Labs</td>
+                        <td>10/05/2025</td>
+                    </tr>
+                    <tr>
+                        <td>INS-005</td>
+                        <td>Sales de Baño</td>
+                        <td>Corporales</td>
+                        <td class="sales-col">15</td>
+                        <td>Relax Solutions</td>
+                        <td>05/11/2024</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>INS-006</td>
+                        <td>Mascarilla Capilar</td>
+                        <td>Cabello</td>
+                        <td class="sales-col">8</td>
+                        <td>Hair Experts</td>
+                        <td>18/03/2025</td>
+                    </tr>
+                    <tr>
+                        <td>INS-007</td>
+                        <td>Crema de Manos</td>
+                        <td>Manos y Pies</td>
+                        <td class="sales-col">20</td>
+                        <td>Skin Care Inc.</td>
+                        <td>25/09/2024</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#insumoModal">
+            + Agregar Insumo
+        </button>
+    </div>
+
+    <!-- Modal para agregar insumo -->
+    <div class="modal fade" id="insumoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Agregar nuevo insumo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formInsumo">
+                        <div class="mb-3">
+                            <label class="form-label">Nombre del insumo</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Categoría</label>
+                            <select class="form-select" required>
+                                <option value="">Seleccionar categoría</option>
+                                <option value="faciales">Faciales</option>
+                                <option value="corporales">Corporales</option>
+                                <option value="aromaterapia">Aromaterapia</option>
+                                <option value="cabello">Cabello</option>
+                                <option value="manos-pies">Manos y Pies</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Cantidad</label>
+                            <input type="number" class="form-control" min="1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Proveedor</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Fecha de vencimiento</label>
+                            <input type="date" class="form-control">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Guardar insumo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
