@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Spa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .highlight { background-color: #f8f9fa; }
+        .price-col { font-weight: bold; }
+        .sales-col { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm mb-4" style="border-bottom: 1px solid #f0f0f0;">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold fs-4" href="#" style="color: #d48a9f;">Dashboard Spa</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item mx-1">
+                        <a class="nav-link px-3 py-2 rounded" href="clientes.html" style="color: #888;">Clientes</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link px-3 py-2 rounded active" href="vendedores.html" style="background-color: #f8e8eb; color: #c76988;">Vendedores</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link px-3 py-2 rounded" href="productos.html" style="color: #888;">Productos</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link px-3 py-2 rounded" href="#" style="color: #888;">Ventas</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link px-3 py-2 rounded" href="#" style="color: #888;">Categorías</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link px-3 py-2 rounded" href="#" style="color: #888;">Insumos</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a href="../index.html" class="btn btn-light">Cerrar Sesion</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="mb-4">Listado de Vendedores</h2>
+        
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered">
+                <thead class="table-light">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Teléfono</th>
+                        <th>Email</th>
+                        <th>Ventas (mes)</th>
+                        <th>Comisión</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>VEN-001</td>
+                        <td>Laura Martínez</td>
+                        <td>3101234567</td>
+                        <td>laura.m@spa.com</td>
+                        <td class="sales-col">24</td>
+                        <td class="price-col">$1,200,000</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>VEN-002</td>
+                        <td>Carlos Gómez</td>
+                        <td>3202345678</td>
+                        <td>carlos.g@spa.com</td>
+                        <td class="sales-col">18</td>
+                        <td class="price-col">$900,000</td>
+                    </tr>
+                    <tr>
+                        <td>VEN-003</td>
+                        <td>Ana Rodríguez</td>
+                        <td>3153456789</td>
+                        <td>ana.r@spa.com</td>
+                        <td class="sales-col">32</td>
+                        <td class="price-col">$1,600,000</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>VEN-004</td>
+                        <td>David Pérez</td>
+                        <td>3004567890</td>
+                        <td>david.p@spa.com</td>
+                        <td class="sales-col">15</td>
+                        <td class="price-col">$750,000</td>
+                    </tr>
+                    <tr>
+                        <td>VEN-005</td>
+                        <td>Sofía López</td>
+                        <td>3175678901</td>
+                        <td>sofia.l@spa.com</td>
+                        <td class="sales-col">28</td>
+                        <td class="price-col">$1,400,000</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>VEN-006</td>
+                        <td>Juan Ramírez</td>
+                        <td>3186789012</td>
+                        <td>juan.r@spa.com</td>
+                        <td class="sales-col">12</td>
+                        <td class="price-col">$600,000</td>
+                    </tr>
+                    <tr>
+                        <td>VEN-007</td>
+                        <td>María Sánchez</td>
+                        <td>3197890123</td>
+                        <td>maria.s@spa.com</td>
+                        <td class="sales-col">20</td>
+                        <td class="price-col">$1,000,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#vendedorModal">
+            + Agregar Vendedor
+        </button>
+    </div>
+
+    <!-- Modal para agregar vendedor -->
+    <div class="modal fade" id="vendedorModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Registrar Nuevo Vendedor</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formVendedor">
+                        <div class="mb-3">
+                            <label class="form-label">Nombre Completo</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Fecha de Contratación</label>
+                                <input type="date" class="form-control" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Porcentaje de Comisión</label>
+                                <input type="number" class="form-control" min="1" max="50" step="0.5" value="5" required>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
