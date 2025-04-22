@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Spa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .highlight { background-color: #f8f9fa; }
+        .price-col { font-weight: bold; color: #28a745; }
+        .sales-col { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm mb-4" style="border-bottom: 1px solid #f0f0f0;">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold fs-4" href="#" style="color: #d48a9f;">Dashboard Spa</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item mx-1">
+                        <a class="nav-link px-3 py-2 rounded active" href="#" style="color: #888;">Clientes</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link px-3 py-2 rounded" href="vendedores.html" style="color: #888;">Vendedores</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link px-3 py-2 rounded" href="productos.html" style="color: #888;">Productos</a>
+                    </li>
+
+                    <li class="nav-item mx-1">
+                        <a class="nav-link px-3 py-2 rounded" href="categorias.html" style="color: #888;">Categorías</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link px-3 py-2 rounded" href="insumos.html" style="color: #888;">Insumos</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link px-3 py-2 rounded" href="Empleados.html" style="background-color: #f8e8eb; color: #c76988;">Empleados</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a href="../index.html" class="btn btn-light">Cerrar Sesion</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="mb-4">Listado de Empleados</h2>
+        
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered">
+                <thead class="table-light">
+                    <tr>
+                        <th>Cedula</th>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
+                        <th>Teléfono</th>
+                        <th>Cargo</th>
+                        <th>Pago Mensual</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1023456789</td>
+                        <td>Laura Marcela</td>
+                        <td>Ramírez Soto</td>
+                        <td>3114567890</td>
+                        <td>Masajista</td>
+                        <td>$2.100.000</td>
+                    </tr>
+                    <tr>
+                        <td>1122334455</td>
+                        <td>Andrés Felipe</td>
+                        <td>Gómez Rivas</td>
+                        <td>3001234567</td>
+                        <td>Recepcionista</td>
+                        <td>$1.800.000</td>
+                    </tr>
+                    <tr>
+                        <td>0987654321</td>
+                        <td>Karen Juliana</td>
+                        <td>Lozano Ortega</td>
+                        <td>3059988776</td>
+                        <td>Esteticista</td>
+                        <td>$2.500.000</td>
+                    </tr>
+                    <tr>
+                        <td>1234567890</td>
+                        <td>Santiago David</td>
+                        <td>Pérez Mejía</td>
+                        <td>3123344556</td>
+                        <td>Terapeuta</td>
+                        <td>$3.200.000</td>
+                    </tr>
+                    <tr>
+                        <td>1098765432</td>
+                        <td>Paula Andrea</td>
+                        <td>Castro Vargas</td>
+                        <td>3137788990</td>
+                        <td>Administrador</td>
+                        <td>$4.000.000</td>
+                    </tr>
+                    <tr>
+                        <td>1357924680</td>
+                        <td>José Manuel</td>
+                        <td>Morales Ruiz</td>
+                        <td>3009876543</td>
+                        <td>Guardia de seguridad</td>
+                        <td>$1.900.000</td>
+                    </tr>
+                    <tr>
+                        <td>1472583690</td>
+                        <td>Diana Carolina</td>
+                        <td>Suárez Peña</td>
+                        <td>3112233445</td>
+                        <td>Encargada de limpieza</td>
+                        <td>$1.600.000</td>
+                    </tr>
+                    <tr>
+                        <td>1597534862</td>
+                        <td>Fernando Javier</td>
+                        <td>Quintero Salas</td>
+                        <td>3124455667</td>
+                        <td>Terapeuta</td>
+                        <td>$2.900.000</td>
+                    </tr>
+                    <tr>
+                        <td>1789456123</td>
+                        <td>Melissa Viviana</td>
+                        <td>López Cárdenas</td>
+                        <td>3135566778</td>
+                        <td>Esteticista</td>
+                        <td>$2.300.000</td>
+                    </tr>
+                    <tr>
+                        <td>1625347980</td>
+                        <td>Camilo Esteban</td>
+                        <td>Mendoza Gil</td>
+                        <td>3053344556</td>
+                        <td>Masajista</td>
+                        <td>$2.700.000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#clienteModal">
+            + Agregar Empleado
+        </button>
+    </div>
+
+    <!-- Modal para agregar cliente -->
+    <div class="modal fade" id="clienteModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Registrar Nuevo Empleado</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formCliente">
+                        <div class="mb-3">
+                            <label class="form-label">Número de Cedula</label>
+                            <input type="number" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Nombre Completo</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Cargo</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Pago Mensual</label>
+                            <input type="number" class="form-control">
+                        </div>
+                        
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
